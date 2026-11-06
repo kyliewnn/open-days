@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161512">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="OPEN/DAYS">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="description" content="A flexible holiday dashboard for building skills, making things and actually living your days.">
+  <title>OPEN/DAYS 12 — The Keepers Issue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="editorial.css">
+  <link rel="stylesheet" href="zine.css">
+  <link rel="stylesheet" href="experiment.css">
+  <link rel="stylesheet" href="astral.css">
+  <link rel="stylesheet" href="volume10.css">
+  <link rel="stylesheet" href="mastery.css">
+  <link rel="stylesheet" href="safety.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>↗</span></div>
+        <div><strong>OPEN<span class="brand-dot">/</span>DAYS</strong><small>THE KEEPERS ISSUE • VOL. 12</small></div>
+      </div>
+      <div class="sidebar-note"><span>THE LIVING<br>ISSUE.</span><em>make your life the art.</em></div>
+      <nav class="side-nav" aria-label="Sections">
+        <button class="nav-item active" type="button" data-nav="today"><span class="nav-symbol">◫</span> Daily Edit <span class="nav-key">01</span></button>
+        <button class="nav-item" type="button" data-nav="skills"><span class="nav-symbol">✳</span> Star Atlas <span class="nav-key">02</span></button>
+        <button class="nav-item" type="button" data-nav="projects"><span class="nav-symbol">▧</span> Ateliers <span class="nav-key">03</span></button>
+        <button class="nav-item" type="button" data-nav="events"><span class="nav-symbol">◷</span> Events <span class="nav-key">04</span></button>
+        <button class="nav-item" type="button" data-nav="week"><span class="nav-symbol">▦</span> Planner <span class="nav-key">05</span></button>
+        <button class="nav-item" type="button" data-nav="reflect"><span class="nav-symbol">✎</span> Notes <span class="nav-key">06</span></button>
+        <button class="nav-item" type="button" data-nav="archive"><span class="nav-symbol">✿</span> Life Archive <span class="nav-key">08</span></button>
+        <button class="nav-item" type="button" data-nav="reset"><span class="nav-symbol">↻</span> Weekly Reset <span class="nav-key">09</span></button>
+        <button class="nav-item" type="button" data-nav="board"><span class="nav-symbol">✧</span> Playground <span class="nav-key">07</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-quote"><span>NO. 001 / AFTER WACE</span><strong>Make things.<br>Go places.<br>Be someone.</strong><i>↗</i></div>
+        <button type="button" class="plain-nav" data-nav="settings">⚙ <span>Settings & backup</span></button>
+        <div class="storage-note"><span class="signal-dot"></span> Saved on this device</div>
+      </div>
+    </aside>
+    <div class="main-area">
+      <header class="topbar">
+        <button class="mobile-brand" type="button" data-nav="today"><span class="little-star">↗</span> OPEN/DAYS</button>
+        <div class="topbar-left"><span class="eyebrow">THE LIVING ISSUE / 2026—2027</span><span class="topbar-dot">●</span><span id="topToday"></span></div>
+        <div class="topbar-actions"><button type="button" class="search-trigger" data-action="open-command" aria-label="Open quick jump, Control K or Command K"><span>⌕</span> jump to... <kbd>⌘ K</kbd></button><button class="button subtle small" type="button" data-action="focus-room">◉ focus room</button><button class="icon-button palette-button" type="button" data-action="cycle-palette" aria-label="Change accent palette" title="Change accent palette">◐</button><button class="icon-button" type="button" data-nav="settings" aria-label="Open settings">⚙</button></div>
+      </header>
+      <main id="appContent" tabindex="-1"></main>
+      <footer class="footer">OPEN/DAYS © THE LIVING ISSUE <span>DO SOMETHING WORTH PUTTING IN THE SCRAPBOOK ✳</span></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button type="button" class="active" data-nav="today">◫<span>Today</span></button>
+    <button type="button" data-nav="skills">✳<span>Stars</span></button>
+    <button type="button" data-nav="projects">▧<span>Studios</span></button>
+    <button type="button" data-nav="events">◷<span>Events</span></button>
+    <button type="button" data-nav="week">▦<span>Plan</span></button>
+    <button type="button" data-nav="reflect">✎<span>Notes</span></button>
+    <button type="button" data-nav="archive">✿<span>Archive</span></button>
+    <button type="button" data-nav="reset">↻<span>Reset</span></button>
+    <button type="button" data-nav="board">✧<span>Play</span></button>
+  </nav>
+  <div id="modalRoot" aria-live="polite"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div id="pointerAura" aria-hidden="true"></div>
+  <script src="app.js" defer></script>
+  <script src="install.js" defer></script>
+</body>
+</html>

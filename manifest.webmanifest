@@ -1,0 +1,16 @@
+{
+  "id": "./index.html",
+  "name": "OPEN/DAYS — The Keepers Issue",
+  "short_name": "OPEN/DAYS",
+  "description": "A life you make. A creative daily planner, personal archive, project ateliers and mystical skill atlas.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f0ea",
+  "theme_color": "#161512",
+  "orientation": "any",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
